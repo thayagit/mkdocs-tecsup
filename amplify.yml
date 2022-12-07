@@ -4,11 +4,11 @@ frontend:
   phases:
     preBuild:
       commands:
-        - python3 -m pip install --proxy="http://proxy.st-grp.local:8080" --upgrade pip
-        - python3 -m pip install --proxy="http://proxy.st-grp.local:8080" pymdown-extensions
-        - python3 -m pip install --proxy="http://proxy.st-grp.local:8080" plantuml-markdown
-        - python3 -m pip install --proxy="http://proxy.st-grp.local:8080" mkdocs
-        - python3 -m pip install --proxy="http://proxy.st-grp.local:8080" pymdown-extensions
+        - python3 -m pip install --upgrade pip
+        - python3 -m pip install pymdown-extensions
+        - python3 -m pip install plantuml-markdown
+        - python3 -m pip install mkdocs
+        - python3 -m pip install pymdown-extensions
     build:
       commands: 
         - mkdocs build
