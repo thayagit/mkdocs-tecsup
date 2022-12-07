@@ -1,0 +1,21 @@
+#-----
+version: 0.1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - python3 -m pip install --proxy="http://proxy.st-grp.local:8080" --upgrade pip
+        - python3 -m pip install --proxy="http://proxy.st-grp.local:8080" pymdown-extensions
+        - python3 -m pip install --proxy="http://proxy.st-grp.local:8080" plantuml-markdown
+        - python3 -m pip install --proxy="http://proxy.st-grp.local:8080" mkdocs
+        - python3 -m pip install --proxy="http://proxy.st-grp.local:8080" pymdown-extensions
+    build:
+      commands: 
+        - mkdocs build
+  artifacts:
+    baseDirectory: site
+    files:
+      - '**/*'
+  cache:
+    paths: []
+#-----
